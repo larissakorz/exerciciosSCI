@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let students = [];
+
+    let student = []
+    let scores = []
+
+    for(let i = 0; i <= 2; i++){
+      scores = []
+      student = []
+
+      student = prompt("Digite seu nome");
+
+    for(let i = 0; i <= 3; i++){
+      let score = parseFloat(prompt("Digite sua nota"));
+      scores.push(score)
+     }
+
+     average = (scores[0] + scores[1] + scores[2] + scores[3]) / 4;
+
+    students.push([student, average])
+
+    }
+
+    for(let i = 0; i < 3; i++){
+      document.write(students[i][0] + " - " + students[i][1] + "<br>");
+    }
+
+    let biggerAverage = -1;
+    let smallerAverage = 11;
+
+    for(let i = 0; i < students.length; i++){
+      const averageAtual = students[i][1];
+
+      if(averageAtual > biggerAverage){
+        biggerAverage = averageAtual
+      }
+
+      if(averageAtual < smallerAverage){
+        smallerAverage = averageAtual
+      }
+    }
+
+    document.write("<br>" + "Maior nota: " + biggerAverage + "<br>");
+    document.write("Menor nota: " + smallerAverage);
+  </script>
+</body>
+</html>

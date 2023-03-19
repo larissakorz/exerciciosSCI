@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let students = []
+    
+    let scores = []
+    let student = {}
+
+    let keepRegister = "Continuar"
+
+    while(keepRegister === "Continuar") {
+      student = {}
+      scores = []
+      student.name = prompt("Digite seu nome");
+
+      for(let i = 0; i <= 3; i++){
+        let score = parseFloat(prompt("Digite sua nota"));
+        scores.push(score)
+      }
+
+      student.average = (scores[0] + scores[1] + scores[2] + scores[3]) / 4;
+
+      students.push(student)
+      keepRegister = prompt("Continuar ou Encerrar?")
+    }
+
+    students.map((student) => {
+      if(student.average < 6){
+        document.write("A média de " + student.name + " é: " + student.average.toFixed(1))
+        document.write(" e o aluno está REPROVADO" + "<br><br>")
+      }else{
+        document.write("A média de " + student.name + " é: " + student.average.toFixed(1))
+        document.write(" e o aluno está APROVADO" + "<br><br>")
+      }
+    })
+  </script>
+</body>
+</html>
