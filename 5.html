@@ -24,14 +24,13 @@
       scores.push(score)
      }
 
-     average = (scores[0] + scores[1] + scores[2] + scores[3]) / 4;
+      average = (scores[0] + scores[1] + scores[2] + scores[3]) / 4;
 
-    students.push([student, average])
-
+      students.push([student, average])
     }
 
     for(let i = 0; i < 3; i++){
-      document.write(students[i][0] + " - " + students[i][1].toFixed(2) + "<br>");
+      document.write(`${students[i][0]} - ${students[i][1].toFixed(1)} <br>`);
     }
 
     let biggerAverage = -1;
@@ -49,8 +48,8 @@
       }
     }
 
-    document.write("<br>" + "Maior nota: " + biggerAverage.toFixed(2) + "<br>");
-    document.write("Menor nota: " + smallerAverage.toFixed(2));
+    document.write(`<br> Maior nota: ${biggerAverage.toFixed(1)} <br>`);
+    document.write(`Menor nota: ${smallerAverage.toFixed(1)}`);
   </script>
 </body>
 </html>

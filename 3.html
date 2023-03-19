@@ -33,11 +33,11 @@
 
     students.map((student) => {
       if(student.average < 6){
-        document.write("A média de " + student.name + " é: " + student.average.toFixed(1))
-        document.write(" e o aluno está REPROVADO" + "<br><br>")
+        document.write(`A média de ${student.name} é: ${student.average.toFixed(1)}`);
+        document.write(` e o aluno está REPROVADO <br><br>`)
       }else{
-        document.write("A média de " + student.name + " é: " + student.average.toFixed(1))
-        document.write(" e o aluno está APROVADO" + "<br><br>")
+        document.write(`A média de ${student.name} é: ${student.average.toFixed(1)}`);
+        document.write(` e o aluno está APROVADO <br><br>`)
       }
     })
   </script>
